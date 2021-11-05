@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import AddCounterButton from "./components/AddCounterButton";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-function App() {
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faStopwatch, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
+library.add(faStopwatch, faMinus, faPlus);
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <main>
+        <AddCounterButton />
+      </main>
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
