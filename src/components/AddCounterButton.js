@@ -16,7 +16,7 @@ const AddCounterButton = () => {
         Add counter
       </button>
       {counterNum.map((counter, index) => {
-        return <Counter key={index} setCounterNum={setCounterNum} counterNum={counterNum} />;
+        return <Counter key={index} index={index} setCounterNum={setCounterNum} counterNum={counterNum} />;
       })}
     </>
   );
