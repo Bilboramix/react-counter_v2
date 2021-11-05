@@ -1,37 +1,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Counter = ({ setCounterNum, counterNum }) => {
-  let count = 0;
+const Counter = ({ key, setCounterNum, counterNum }) => {
   return (
     <section>
       <div>
-        <button
-          onClick={() => {
-            count--;
-            setCounterNum(counterNum);
-          }}
-        >
+        <button onClick={() => {}}>
           <FontAwesomeIcon icon="minus" />
         </button>
-        <span>{count}</span>
-        <button
-          onClick={() => {
-            count++;
-            setCounterNum(counterNum);
-          }}
-        >
+        <span>{counterNum[key]}</span>
+        <button onClick={() => {}}>
           <FontAwesomeIcon icon="plus" />
         </button>
       </div>
       <div>
-        <button
-          onClick={() => {
-            count = 0;
-            setCounterNum(counterNum);
-          }}
-        >
-          Reset
-        </button>
+        <button onClick={() => {}}>Reset</button>
       </div>
     </section>
   );

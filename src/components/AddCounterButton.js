@@ -2,13 +2,14 @@ import { useState } from "react";
 import Counter from "./Counter";
 
 const AddCounterButton = () => {
-  const [counterNum, setCounterNum] = useState([]);
+  const [counterNum, setCounterNum] = useState([15]);
+  console.log(counterNum);
   return (
     <>
       <button
         onClick={() => {
           const newCounterTab = [...counterNum];
-          newCounterTab.push(<Counter />);
+          newCounterTab.push(0);
           setCounterNum(newCounterTab);
         }}
       >
